@@ -1,7 +1,14 @@
 package com.test.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="T_CUSTOMER_SAMPLE")
 public class Customer {
 
+    @Id
     private Long id;
 
     private String name;
