@@ -14,8 +14,8 @@
   <h:body>
     <h1>JSF with Oracle Persistence using Forge</h1>
     <h:form>
-      <h:commandButton value="Persist with JSF" />
-      <button>Persist with HTML5</button>
+      <h:commandButton value="Persist with JSF" action="#{indexBean.execute}" />
+      <button jsf:action="#{indexBean.execute}">Persist with HTML5</button>
     </h:form>
   </h:body>
 </html>
