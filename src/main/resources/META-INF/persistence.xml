@@ -6,7 +6,6 @@
   <persistence-unit name="jsf-with-oracledb-persistence-unit" transaction-type="RESOURCE_LOCAL">
     <description>Forge Persistence Unit</description>
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
-    <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <class>com.test.model.Customer</class>
     <properties>
       <property name="hibernate.hbm2ddl.auto" value="create"/>
