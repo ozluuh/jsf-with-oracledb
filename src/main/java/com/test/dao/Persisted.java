@@ -1,28 +1,24 @@
 package com.test.dao;
 
-import java.lang.reflect.ParameterizedType;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-public class Persisted<E, K> {
+import com.test.model.Customer;
+
+public class Persisted {
 
     private EntityManager em;
 
-    private Class<E> clazz;
-
-    @SuppressWarnings("unchecked")
     public Persisted(EntityManager em) {
         this.em = em;
-        this.clazz = (Class<E>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
     }
 
-    public void save(E entity) {
+    public void save(Customer entity) {
         em.persist(entity);
     }
 
-    public E findById(K id) {
-        return em.find(clazz, id);
+    public Customer findById(Long id) {
+        return em.find(Customer.class, id);
     }
 
     public void commit() {

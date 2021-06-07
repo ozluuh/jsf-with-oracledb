@@ -14,7 +14,7 @@ public class IndexBean {
 
     private Customer customer = new Customer();
 
-    private Persisted<Customer, Long> dao = new Persisted<Customer, Long>(em);
+    private Persisted dao = new Persisted(em);
 
     public void execute() {
         dao.save(customer);
