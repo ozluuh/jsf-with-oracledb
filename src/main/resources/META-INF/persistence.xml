@@ -13,6 +13,11 @@
       <property name="hibernate.format_sql" value="true"/>
       <property name="hibernate.transaction.flush_before_completion" value="true"/>
       <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+      <!-- JDBC connection -->
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
+      <property name="javax.persistence.jdbc.user" value="<USER>" />
+      <property name="javax.persistence.jdbc.password" value="<PASSWORD>" />
+      <property name="javax.persistence.jdbc.url" value="<ORACLE_JDBC_URL_STRING>" />
     </properties>
   </persistence-unit>
 </persistence>
